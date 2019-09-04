@@ -94,51 +94,6 @@ router.get('/:id/comments', (req, res) => {
         })
 })
 
-// router.post('/:id/comments', (req, res) => {
-//     const id = req.params.id;
-//     const comment = req.body;
-//     console.log('id', id);
-
-//     if (id) {
-//         if (comment.text && comment.text !== "") {
-//             DB.insertComment(comment)
-//             .then(db => {
-//                 res.status(200).json(db)
-//             })
-//             .catch(error => {
-//                 res.status(200).json({ message: 'error posting comment' })
-//             })
-//         } else {
-//             res.status(400).json({ message: 'please provide a comment' })
-//         }
-//     } else {
-//         res.status(404).json({ message: 'user does not exist' })
-//     }
-// })
-
-// router.post('/:id/comments', (req, res) => {
-//     const id = req.params.id;
-//     const comment = req.body;
-//     console.log('id', id);
-
-//     if (comment.text && comment.text !== "") {
-//         DB.insertComment(comment)
-//             .then(db => {
-//                 console.log('db', db)
-//                 if (db.length !== 0) {
-//                     res.status(200).json(db)
-//                 } else {
-//                     res.status(404).json({ message: 'user does not exist' })
-//                 }
-//             })
-//             .catch(error => {;
-//                 res.status(500).json({ message: 'error retrieving user' })
-//             })
-//     } else {
-//         res.status(500).json({ message: 'please provide a comment' })
-//     }
-// })
-
 router.post('/:id/comments', (req, res) => {
     const id = req.params.id;
     const comment = req.body;
